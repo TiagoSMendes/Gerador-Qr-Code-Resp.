@@ -1,0 +1,19 @@
+{
+  "_sobre": "Lido automaticamente pelo portfólio de Tiago Mendes. Edite para mudar como o projeto aparece lá.",
+  "titulo": {
+    "pt": "Gerador de QR Code",
+    "en": "QR code generator"
+  },
+  "descricao": {
+    "pt": "Gera QR Codes de links ou textos, com escolha de tamanho e download em PNG.",
+    "en": "Generates QR codes from links or text, with size options and PNG download."
+  },
+  "tags": [
+    "JavaScript",
+    "API",
+    "Responsivo"
+  ],
+  "site": "",
+  "imagem": "portfolio.webp",
+  "ordem": 5
+}
