@@ -2,34 +2,40 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Tiago Mendes">
-    <meta name="description" content="Gerador de Qr Code">
-    <meta name="keywords" content="Gerador de Qr Code, Gerar de Qr Code, Criar de Qr Code">
-
+    <meta name="description" content="Gere QR Codes de links ou textos e baixe a imagem em PNG, de graça.">
+    <meta name="keywords" content="Gerador de QR Code, Gerar QR Code, Criar QR Code">
+    <title>Gerador de QR Code</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔳</text></svg>">
     <link rel="stylesheet" href="style.css">
-    <link href="https://devenvolvente0190.github.io/Gerador-QrCode/style.css" rel="stylesheet" />
-    <script src="https://devenvolvente0190.github.io/Gerador-QrCode/script.js"></script> 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6482348299370206"
-     crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="https://br-code.picpay.com/static/images/br-code.png" type="image/x-icon">
-    <title>Gerador de Qr Code</title>
 </head>
 <body>
-    <div class="wrapper">
+    <main class="wrapper">
         <header>
-            <h1>Gerador de Qr Code</h1>
-            <p>Insira uma url ou texto para criar um Qr Code</p>
+            <h1>Gerador de QR Code</h1>
+            <p>Insira um link ou texto para criar um QR Code</p>
         </header>
-        <div class="form">
-            <input type="text" placeholder="Insira aqui">
-            <button>Gerar Qr Code</button>
+        <form class="form" novalidate>
+            <label for="qr-texto" class="sr-only">Link ou texto</label>
+            <input type="text" id="qr-texto" placeholder="Ex.: https://github.com/TiagoSMendes" autocomplete="off" maxlength="900">
+
+            <label for="qr-tamanho" class="tamanho">Tamanho
+                <select id="qr-tamanho">
+                    <option value="200">Pequeno (200 px)</option>
+                    <option value="300" selected>Médio (300 px)</option>
+                    <option value="500">Grande (500 px)</option>
+                </select>
+            </label>
+
+            <button type="submit">Gerar QR Code</button>
+            <p class="erro" role="alert" aria-live="polite"></p>
+        </form>
+        <div class="qr-code" aria-live="polite">
+            <img src="" alt="QR Code gerado" class="img">
+            <a class="baixar" href="#" download="qrcode.png">⬇ Baixar PNG</a>
         </div>
-        <div class="qr-code">
-            <img src="" alt="qrcode" class="img">
-        </div>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
